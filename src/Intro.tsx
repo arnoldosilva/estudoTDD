@@ -3,6 +3,8 @@ import {StyleSheet, Text, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient'
 import {Colors} from '../src/consts/colors'
 import moment from 'moment';
+import WeatherCurrent from './WeatherCurrent';
+import WeatherCordinates from '../src/WeatherCordinates'
 
 interface Props {
   
@@ -10,10 +12,11 @@ interface Props {
 
 const Intro = (props: Props) => {
   const [date, setDate] = useState('')
+  const [weekDay, setWeekDay] = useState('')
 
   useEffect(() => {
     setDate(moment().format('DD MMMM YY'))
-    console.log(moment().unix())
+    setWeekDay(moment().format('dddd'))
   }, [])
 
 
@@ -24,9 +27,10 @@ const Intro = (props: Props) => {
       style={styles.container}
       > 
         <View style={styles.title}>
-          <Text style={styles.date}>
-            {date}
-          </Text>
+          <WeatherCurrent />
+          <Text style={styles.date}>{date}</Text>
+          <Text style={styles.weekDay}>{weekDay}</Text>
+          <WeatherCordinates />
         </View>
 
     </LinearGradient>
@@ -49,6 +53,10 @@ const styles = StyleSheet.create({
   date:{
     color:Colors.GRAY,
     fontSize:15,
-  }  
+  } ,
+  weekDay:{
+    color:Colors.Withe,
+    fontSize:22
+  }
 });
 

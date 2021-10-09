@@ -29,6 +29,10 @@ describe('Fake Time', () => {
    const wraper = render(<Intro />)
    wraper.getByText('09 October 21')
  })
+ test('should contain current day od week', () => {
+   const wraper = render(<Intro />)
+   wraper.getByText('Saturday')
+ })
  
 
 })
