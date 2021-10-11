@@ -14,7 +14,7 @@ interface Props {
   
 }
 
-const AppNavigator = (props: Props) => {
+const Routes = (props: Props) => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown:true}}>        
@@ -24,4 +24,4 @@ const AppNavigator = (props: Props) => {
   )
 }
 
-export default AppNavigator
+export default Routes

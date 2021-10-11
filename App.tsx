@@ -1,24 +1,33 @@
-import React from 'react'
-import { View, StyleSheet } from 'react-native'
-import AppNavigator from './src/AppNavigator';
+// import React from 'react'
+// import Routes from './src/Routes';
 
-interface Props {
+// interface Props {
   
-}
+// }
 
-const App = (props: Props) => {
+// const App = (props: Props) => {
+//   return (
+//       <Routes />
+//   )
+// }
+import * as React from 'react';
+import { View, Text } from 'react-native';import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+function HomeScreen() { 
   return (
-    <View style={styles.container} testID="app">
-      <AppNavigator />
-    </View>
-  )
-}
+  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <Text>Home Screen</Text>
+  </View>  );}
+const Stack = createNativeStackNavigator();
+
+function App() {  
+  return (
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen name="Home" component={HomeScreen} />      
+          </Stack.Navigator>    
+        </NavigationContainer>  );}
+
 
 export default App
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-});
