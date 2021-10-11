@@ -1,16 +1,16 @@
 import React,{useState,useEffect} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient'
-import {Colors} from '../src/consts/colors'
+import {Colors} from './consts/colors'
 import moment from 'moment';
 import WeatherCurrent from './WeatherCurrent';
-import WeatherCordinates from '../src/WeatherCordinates'
+import WeatherCordinates from './WeatherCordinates'
 
 interface Props {
   
 }
 
-const Intro = (props: Props) => {
+const HomeScreen = (props: Props) => {
   const [date, setDate] = useState('')
   const [weekDay, setWeekDay] = useState('')
 
@@ -37,7 +37,7 @@ const Intro = (props: Props) => {
   );
 }
 
-export default Intro
+export default HomeScreen
 
 
 const styles = StyleSheet.create({

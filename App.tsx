@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
-import Intro from './src/Intro'
+import Index from './src/screens/Index';
 
 interface Props {
   
@@ -9,7 +9,7 @@ interface Props {
 const App = (props: Props) => {
   return (
     <View style={styles.container} testID="app">
-      <Intro />
+      <Index />
     </View>
   )
 }

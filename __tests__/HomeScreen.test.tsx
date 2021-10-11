@@ -1,11 +1,11 @@
-import Intro from '../src/Intro';
+import HomeScreen from '../src/HomeScreen';
 import React from 'react';
 import {render} from '@testing-library/react-native'
 
 
-describe('Intro Screen', () => {
+describe('HomeScreen', () => {
   test('should show intro screen', () => {
-    const container = render(<Intro />)
+    const container = render(<HomeScreen />)
     container.getByTestId('intro')
   })
   
@@ -26,12 +26,12 @@ describe('Fake Time', () => {
 //  })
 
  test('should contain current timer', () => {
-   const wraper = render(<Intro />)
-   wraper.getByText('09 October 21')
+   const wraper = render(<HomeScreen />)
+   wraper.getByText('11 October 21')
  })
  test('should contain current day od week', () => {
-   const wraper = render(<Intro />)
-   wraper.getByText('Saturday')
+   const wraper = render(<HomeScreen />)
+   wraper.getByText('Monday')
  })
  
 
