@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from '@testing-library/react-native'
 // import WeatherCurrent from '../src/WeatherCurrent'
-import HomeScreen from '../src/HomeScreen'
+import HomeScreen from '../src/screens/HomeScreen'
 
 describe('Intro Screen', () => {
   test('should show intro screen', () => {

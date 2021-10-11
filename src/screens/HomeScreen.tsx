@@ -1,10 +1,10 @@
 import React,{useState,useEffect} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient'
-import {Colors} from './consts/colors'
+import {Colors} from '../consts/colors'
 import moment from 'moment';
-import WeatherCurrent from './WeatherCurrent';
-import WeatherCordinates from './WeatherCordinates'
+import WeatherCurrent from '../WeatherCurrent';
+import WeatherCordinates from '../WeatherCordinates'
 
 interface Props {
   
